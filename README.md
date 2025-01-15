@@ -1,5 +1,5 @@
 # translator
-book translation using LLMs
+book translation using Gemini API
 
 
 ## install dependencies
@@ -12,8 +12,10 @@ pip install -r requirements.txt
 make sure to set environment variable `GOOGLE_API_KEY`
 
 ## run the translation
-`input_path` : this point to the book need to be translated
-`output_path`: this point to the location of translated book
+* `input_path` : Path to the input book file
+* `input_language` : Input language of the book
+* `output_path`: Path to the output translated book file
+* `output_language`: Target language of the translation
 
 Example:
 ```
