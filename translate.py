@@ -54,11 +54,13 @@ def write_output(translated_chunks: list, output_path: str):
 if __name__ == "__main__":
     argparser = argparse.ArgumentParser(description="Translate a book using the Google LLM API")
     argparser.add_argument("--input_path", type=str, help="Path to the input book file")
+    argparser.add_argument("--input_language", type=str, help="Input language of the book")
     argparser.add_argument("--output_path", type=str, help="Path to the output translated book file")
+    argparser.add_argument("--output_language", type=str, help="Target language of the translation")
     args = argparser.parse_args()
 
     chunks = chunk_book(args.input_path)
-    translated_chunks = translate(chunks, 'Chinese', 'English')
+    translated_chunks = translate(chunks, args.input_language, args.output_language)
     write_output(translated_chunks, args.output_path)
 
 

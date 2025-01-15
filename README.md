@@ -17,5 +17,5 @@ make sure to set environment variable `GOOGLE_API_KEY`
 
 Example:
 ```
-python translate.py --input_path=input/book1.txt --output_path=output/book1.txt
+python translate.py --input_path=input/book1.txt --input_language=Chinese --output_path=output/book1.txt --output_language=English
 ```
