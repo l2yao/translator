@@ -5,7 +5,7 @@ GOOGLE_API_KEY=os.environ['GOOGLE_API_KEY']
 
 genai.configure(api_key=GOOGLE_API_KEY)
 
-model = genai.GenerativeModel('gemini-2.0-flash-exp')
+model = genai.GenerativeModel('gemini-2.0-flash')
 
 def generate_output(prompt):
     response = model.generate_content(
@@ -27,6 +27,8 @@ def translations(text,
     translation_prompt = f"""
     As a professional book translator,
     translate the following book from {inputLanguage} into {targetLanguage}.
+
+    Only return the translation please.
 
     Book to Translate:
     {text}
